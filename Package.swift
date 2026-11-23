@@ -5,12 +5,13 @@ import PackageDescription
 
 let package = Package(
     name: "EventSource",
+    // slowhand patch: iOS 16+ so arm64e objects get class_ro_t pointer signing.
     platforms: [
-        .iOS("15.0"),
-        .macOS("12.0"),
-        .macCatalyst("15.0"),
-        .watchOS("8.0"),
-        .tvOS("15.0"),
+        .iOS("16.0"),
+        .macOS("13.0"),
+        .macCatalyst("16.0"),
+        .watchOS("9.0"),
+        .tvOS("16.0"),
         .visionOS("1.0"),
     ],
     products: [
